@@ -19,6 +19,7 @@ public class MagicNumbers : MonoBehaviour
         Debug.Log("Максимальное число: " + maxNumber);
 
         guess = (minNumber + maxNumber) / 2;
+
         Debug.Log("Ваше число: " + guess + "?");
     }
 
@@ -27,12 +28,16 @@ public class MagicNumbers : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
-            Debug.Log("Ваше число больше 500");
+            minNumber = guess;
+            guess = (minNumber + maxNumber) / 2;
+            Debug.Log("Ваше число: " + guess + "?");
         }
         
         else if (Input.GetKeyDown(KeyCode.DownArrow))
         {
-            Debug.Log("Ваше число меньше 500");
+            maxNumber = guess;
+            guess = (minNumber + maxNumber) / 2;
+            Debug.Log("Ваше число: " + guess + "?");
         }
 
         else if (Input.GetKeyDown(KeyCode.Return))
