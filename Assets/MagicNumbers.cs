@@ -9,6 +9,7 @@ public class MagicNumbers : MonoBehaviour
     int minNumber = 1;
     int maxNumber = 1000;
     int guess;
+    int attempts = 1;
     string playerName = "Vitya";
 
     void Start()
@@ -40,18 +41,20 @@ public class MagicNumbers : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
             minNumber = guess;
+            attempts++;
             UpdateGuess();
         }
         
         else if (Input.GetKeyDown(KeyCode.DownArrow))
         {
             maxNumber = guess;
+            attempts++;
             UpdateGuess();
         }
 
         else if (Input.GetKeyDown(KeyCode.Return))
         {
-            Debug.Log("Я угадал, ваше число: " + guess);
+            Debug.Log("Я угадал, ваше число: " + guess + ". Колличество попыток: " + attempts);
             StartGame();
         }
 
