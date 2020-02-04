@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class NewScript : MonoBehaviour
 {
-    int SumOfNumbers;
-    int CorrectSum = 50;
+    int sumOfNumbers;
+    int correctSum = 50;
     int attempts = 0;
 
     // Start is called before the first frame update
@@ -13,22 +13,22 @@ public class NewScript : MonoBehaviour
     void Start()
     {
         Debug.Log("Добро пожаловать, нажимайте цифры от 1 до 9. Доберитесь до 50.");
-        SumOfNumbers = 0;
+        sumOfNumbers = 0;
         
     }
 
     void CheckSum()
     {
         attempts++;
-        if (SumOfNumbers >= CorrectSum)
+        if (sumOfNumbers >= correctSum)
         {
-            Debug.Log("Игра окончена. Сумма равна: " + SumOfNumbers + ". Количество попыток: " + attempts);
+            Debug.Log("Игра окончена. Сумма равна: " + sumOfNumbers + ". Количество попыток: " + attempts);
             attempts = 0;
-            SumOfNumbers = 0;
+            sumOfNumbers = 0;
         }
         else
         {
-            Debug.Log("Сумма чисел равна: " + SumOfNumbers);
+            Debug.Log("Сумма чисел равна: " + sumOfNumbers);
         }
     }
 
@@ -39,61 +39,61 @@ public class NewScript : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
-            SumOfNumbers = SumOfNumbers + 1;
+            sumOfNumbers = sumOfNumbers + 1;
             CheckSum();
         }
 
         else if (Input.GetKeyDown(KeyCode.Alpha2))
         {
-            SumOfNumbers = SumOfNumbers + 2;
+            sumOfNumbers = sumOfNumbers + 2;
             CheckSum();
         }
 
         else if (Input.GetKeyDown(KeyCode.Alpha3))
         {
-            SumOfNumbers = SumOfNumbers + 3;
+            sumOfNumbers = sumOfNumbers + 3;
             CheckSum();
         }
 
         else if (Input.GetKeyDown(KeyCode.Alpha4))
         {
-            SumOfNumbers = SumOfNumbers + 4;
+            sumOfNumbers = sumOfNumbers + 4;
             CheckSum();
         }
 
         else if (Input.GetKeyDown(KeyCode.Alpha5))
         {
-            SumOfNumbers = SumOfNumbers + 5;
+            sumOfNumbers = sumOfNumbers + 5;
             CheckSum();
         }
 
         else if (Input.GetKeyDown(KeyCode.Alpha6))
         {
-            SumOfNumbers = SumOfNumbers + 6;
+            sumOfNumbers = sumOfNumbers + 6;
             CheckSum();
         }
 
         else if (Input.GetKeyDown(KeyCode.Alpha7))
         {
-            SumOfNumbers = SumOfNumbers + 7;
+            sumOfNumbers = sumOfNumbers + 7;
             CheckSum();
         }
 
         else if (Input.GetKeyDown(KeyCode.Alpha8))
         {
-            SumOfNumbers = SumOfNumbers + 8;
+            sumOfNumbers = sumOfNumbers + 8;
             CheckSum();
         }
 
         else if (Input.GetKeyDown(KeyCode.Alpha9))
         {
-            SumOfNumbers = SumOfNumbers + 9;
+            sumOfNumbers = sumOfNumbers + 9;
             CheckSum();
         }
 
         else if (Input.GetKeyDown(KeyCode.Space))
         {
-            SumOfNumbers = 0;
+            sumOfNumbers = 0;
             Debug.Log("Сумма равна 0.");
         }
     }
