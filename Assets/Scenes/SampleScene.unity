@@ -96,6 +96,7 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaAO: 1
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
+    m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
   m_UseShadowmask: 1
 --- !u!196 &4
@@ -220,7 +221,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1033607006}
   - component: {fileID: 1033607005}
-  - component: {fileID: 1033607004}
+  - component: {fileID: 1033607003}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -228,14 +229,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &1033607004
-AudioListener:
+--- !u!114 &1033607003
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1033607002}
   m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98070a5b4c93e9645975d4f8cc580a79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!20 &1033607005
 Camera:
   m_ObjectHideFlags: 0
