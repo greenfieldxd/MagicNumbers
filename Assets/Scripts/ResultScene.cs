@@ -8,7 +8,7 @@ public class ResultScene : MonoBehaviour
 
     public Text resultText;
 
-    // Start is called before the first frame update
+    
     void Start()
     {
         MagicNumbersUI magicNumbers = FindObjectOfType<MagicNumbersUI>();
@@ -19,7 +19,7 @@ public class ResultScene : MonoBehaviour
         //Destoy(magicNumbers); //destroy component
     }
 
-    // Update is called once per frame
+    
     void Update()
     {
         
